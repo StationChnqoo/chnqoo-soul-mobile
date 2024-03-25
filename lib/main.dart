@@ -41,7 +41,7 @@ class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
     return GetMaterialApp(
       title: '',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
         snackBarTheme: SnackBarThemeData(
           shape: RoundedRectangleBorder(

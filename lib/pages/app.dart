@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:soul/pages/home/index.dart';
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       screens: _buildScreens(),
       items: _navBarsItems(context),
       confineInSafeArea: true,
-      backgroundColor: Colors.white, // Default is Colors.white.
+      // backgroundColor: Colors.white, // Default is Colors.white.
       handleAndroidBackButtonPress: true, // Default is true.
       resizeToAvoidBottomInset:
           true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -40,7 +41,7 @@ class App extends StatelessWidget {
   }
 
   List<Widget> _buildScreens() {
-    return [Container(), Container(), Container(), Container(), Container()];
+    return [HomePage(), Container(), Container(), Container(), Container()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems(context) {
