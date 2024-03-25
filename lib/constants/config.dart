@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Config {
@@ -13,6 +14,7 @@ class Config {
 
   /** UI */
   static double PAGE_PADDING = 15;
+  static Color PAGE_BACKGROUND = Color.fromARGB(0, 244, 234, 203);
 
   /** 映射Config文件 */
   static String useConfigDotenvFile(String package) {

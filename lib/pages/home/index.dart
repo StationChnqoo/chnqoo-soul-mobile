@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
@@ -41,8 +42,8 @@ class HomePageState extends State<HomePage> {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                    Color(0x3ab54b).withOpacity(0.58),
-                    Color(0x8ec541).withOpacity(0.88),
+                    Colors.pinkAccent.withOpacity(0.58),
+                    Colors.red.withOpacity(0.88),
                   ])),
               child: Center(
                 child: Row(
@@ -51,7 +52,9 @@ class HomePageState extends State<HomePage> {
                 ),
               ))),
       body: Container(
-        // decoration: BoxDecoration(color: Color(0xfff6f8fa)),
+        decoration: BoxDecoration(
+            color: CupertinoColors.systemBrown.color.withOpacity(0.09)),
+        // padding: EdgeInsets.symmetric(horizontal: 12),
         child: SingleChildScrollView(
             child: Column(
           children: [
@@ -63,8 +66,8 @@ class HomePageState extends State<HomePage> {
                 margin: EdgeInsets.symmetric(
                     horizontal: Config.PAGE_PADDING, vertical: 6),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: MyCard(
                   child: CarouselSlider(
                     options: CarouselOptions(
@@ -93,18 +96,6 @@ class HomePageState extends State<HomePage> {
                     }).toList(),
                   ),
                 )),
-            Container(
-                margin: EdgeInsets.all(12),
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Center(
-                  child: Text(
-                    'Env: ${dotenv.get('ENV')}',
-                    style: TextStyle(color: Colors.black38, fontSize: 12),
-                  ),
-                ))
           ],
         )),
       ),

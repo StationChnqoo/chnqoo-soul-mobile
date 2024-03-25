@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:soul/pages/home/index.dart';
+import 'package:soul/pages/social/index.dart';
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class App extends StatelessWidget {
   }
 
   List<Widget> _buildScreens() {
-    return [HomePage(), Container(), Container(), Container(), Container()];
+    return [HomePage(), SocialPage(), Container(), Container(), Container()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems(context) {
@@ -58,7 +59,7 @@ class App extends StatelessWidget {
         (index) => PersistentBottomNavBarItem(
               icon: Icon(
                 icons[index],
-                size: 24,
+                // size: 24,
               ),
               title: (titles[index]),
               activeColorPrimary: Theme.of(context).primaryColor,
