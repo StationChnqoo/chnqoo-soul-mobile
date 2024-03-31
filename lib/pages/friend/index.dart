@@ -5,6 +5,7 @@ import 'package:soul/constants/config.dart';
 import 'package:soul/constants/get_stores.dart';
 import 'package:soul/constants/services.dart';
 import 'package:soul/constants/x.dart';
+import 'package:soul/pages/friend/widgets/popular.dart';
 import 'package:soul/widgets/my_avatar.dart';
 import 'package:soul/widgets/my_card.dart';
 
@@ -57,9 +58,10 @@ class FriendPageState extends State<FriendPage> {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            SizedBox(
-              height: 6,
+             SizedBox(
+              height: 12,
             ),
+            FriendPopular(),
             ...List.generate(
                 10,
                 (index) => Container(

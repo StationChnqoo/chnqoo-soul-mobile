@@ -22,7 +22,7 @@ class MyAvatar extends StatelessWidget {
                     imageUrl: url,
                     width: size,
                     height: size,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.contain,
                   )),
         onTap: () => onPress());
   }

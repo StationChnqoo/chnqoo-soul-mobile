@@ -1,9 +1,5 @@
-import 'dart:math';
-
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fluent_ui/fluent_ui.dart' hide Colors, FilledButton;
 import 'package:flutter/material.dart';
-import 'package:soul/widgets/my_avatars.dart';
 import 'package:soul/widgets/my_title_card.dart';
 
 class HomeFeedbacks extends StatefulWidget {
