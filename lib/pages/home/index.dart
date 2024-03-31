@@ -8,6 +8,8 @@ import 'package:soul/constants/get_stores.dart';
 import 'package:soul/constants/services.dart';
 import 'package:soul/constants/x.dart';
 import 'package:soul/pages/home/widgets/activities.dart';
+import 'package:soul/pages/home/widgets/feedback.dart';
+import 'package:soul/pages/home/widgets/topics.dart';
 import 'package:soul/widgets/my_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,7 +80,9 @@ class HomePageState extends State<HomePage> {
                     }).toList(),
                   ),
                 )),
-            HomeActivities()
+            HomeActivities(),
+            HomeTopics(),
+            HomeFeedbacks()
           ],
         )),
       ),

@@ -77,7 +77,7 @@ class HomeActivitiesState extends State<HomeActivities> {
                                                         style: TextStyle(
                                                             color:
                                                                 Colors.black54,
-                                                            fontSize: 12),
+                                                            fontSize: 10),
                                                       )),
                                                   Row(
                                                     children: [
@@ -117,7 +117,7 @@ class HomeActivitiesState extends State<HomeActivities> {
                                                     decoration: BoxDecoration(
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(8),
+                                                                .circular(4),
                                                         color: Theme.of(context)
                                                             .primaryColor
                                                             .withOpacity(0.18)),
@@ -127,7 +127,7 @@ class HomeActivitiesState extends State<HomeActivities> {
                                                           color:
                                                               Theme.of(context)
                                                                   .primaryColor,
-                                                          fontSize: 14),
+                                                          fontSize: 12),
                                                     ),
                                                   ))
                                             ],
@@ -142,6 +142,6 @@ class HomeActivitiesState extends State<HomeActivities> {
                 ],
               ),
             ),
-            title: '热门活动'));
+            title: '活动'));
   }
 }
