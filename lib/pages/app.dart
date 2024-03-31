@@ -1,9 +1,11 @@
+import 'package:fluent_ui/fluent_ui.dart' hide Colors;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:soul/pages/friend/index.dart';
 import 'package:soul/pages/home/index.dart';
 import 'package:soul/pages/social/index.dart';
+import 'package:soul/pages/store/index.dart';
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
@@ -42,18 +44,19 @@ class App extends StatelessWidget {
   }
 
   List<Widget> _buildScreens() {
-    return [HomePage(), SocialPage(), Container(), Container(), Container()];
+    return [HomePage(), SocialPage(), FriendPage(), StorePage(), Container()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems(context) {
     const icons = [
       CupertinoIcons.house_alt,
       Icons.emoji_symbols_outlined,
-      Icons.drive_file_rename_outline,
-      Icons.insert_invitation_outlined,
+      FluentIcons.search_nearby,
+      FluentIcons.balloons,
+      // Icons.insert_invitation_outlined,
       CupertinoIcons.settings
     ];
-    const titles = ['首页', '社区', '新建', '视频', '我的'];
+    const titles = ['首页', '社区', '发现', '推广', '我的'];
     return List.generate(
         5,
         (index) => PersistentBottomNavBarItem(

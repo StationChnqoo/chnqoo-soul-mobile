@@ -8,14 +8,14 @@ import 'package:soul/constants/x.dart';
 import 'package:soul/widgets/my_avatar.dart';
 import 'package:soul/widgets/my_card.dart';
 
-class SocialPage extends StatefulWidget {
-  const SocialPage({super.key});
+class StorePage extends StatefulWidget {
+  const StorePage({super.key});
 
   @override
-  State<SocialPage> createState() => SocialPageState();
+  State<StorePage> createState() => StorePageState();
 }
 
-class SocialPageState extends State<SocialPage> {
+class StorePageState extends State<StorePage> {
   ScrollController? swiper;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GetStores stores = Get.find<GetStores>();

@@ -28,32 +28,14 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          automaticallyImplyLeading: false,
-          leading: null,
-          elevation: 12,
-          shadowColor: Colors.black.withOpacity(.618),
-          flexibleSpace: Container(
-              padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).padding.top, left: 12, right: 12),
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                    Colors.pinkAccent.withOpacity(0.58),
-                    Colors.red.withOpacity(0.88),
-                  ])),
-              child: Center(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [],
-                ),
-              ))),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0.0), // 设置高度为0
+        child: Container(),
+      ),
       body: Container(
         decoration: BoxDecoration(
-            color: CupertinoColors.systemBrown.color.withOpacity(0.09)),
+            // color: CupertinoColors.systemBrown.color.withOpacity(0.09)
+            ),
         // padding: EdgeInsets.symmetric(horizontal: 12),
         child: SingleChildScrollView(
             child: Column(
