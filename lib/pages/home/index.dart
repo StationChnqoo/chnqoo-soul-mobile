@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
@@ -8,6 +7,7 @@ import 'package:soul/constants/config.dart';
 import 'package:soul/constants/get_stores.dart';
 import 'package:soul/constants/services.dart';
 import 'package:soul/constants/x.dart';
+import 'package:soul/pages/home/widgets/activities.dart';
 import 'package:soul/widgets/my_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,6 +33,7 @@ class HomePageState extends State<HomePage> {
         child: Container(),
       ),
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: Config.PAGE_PADDING),
         decoration: BoxDecoration(
             // color: CupertinoColors.systemBrown.color.withOpacity(0.09)
             ),
@@ -45,8 +46,7 @@ class HomePageState extends State<HomePage> {
             ),
             Container(
                 width: double.infinity,
-                margin: EdgeInsets.symmetric(
-                    horizontal: Config.PAGE_PADDING, vertical: 6),
+                margin: EdgeInsets.only(bottom: 12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -55,7 +55,7 @@ class HomePageState extends State<HomePage> {
                     options: CarouselOptions(
                       autoPlay: true,
                       height: (MediaQuery.of(context).size.width - 32) * 0.25,
-                      viewportFraction: 0.66,
+                      viewportFraction: 0.77,
                       enlargeCenterPage: true,
                     ),
                     items: [1, 2, 3, 4, 5].map((i) {
@@ -78,6 +78,7 @@ class HomePageState extends State<HomePage> {
                     }).toList(),
                   ),
                 )),
+            HomeActivities()
           ],
         )),
       ),
