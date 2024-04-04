@@ -7,8 +7,6 @@ import 'package:soul/constants/services.dart';
 import 'package:soul/constants/x.dart';
 import 'package:soul/pages/social/widgets/org.dart';
 import 'package:soul/pages/social/widgets/post.dart';
-import 'package:soul/widgets/my_avatar.dart';
-import 'package:soul/widgets/my_card.dart';
 
 class SocialPage extends StatefulWidget {
   const SocialPage({super.key});
@@ -60,12 +58,10 @@ class SocialPageState extends State<SocialPage> {
             child: Column(
           children: [
             SizedBox(
-              height: 6,
+              height: 12,
             ),
             SocialOrg(),
-            ...List.generate(
-                10,
-                (index) => SocialPost())
+            ...List.generate(10, (index) => SocialPost())
           ],
         )),
       ),

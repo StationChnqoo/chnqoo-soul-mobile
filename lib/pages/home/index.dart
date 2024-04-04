@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,7 @@ import 'package:soul/constants/services.dart';
 import 'package:soul/constants/x.dart';
 import 'package:soul/pages/home/widgets/activities.dart';
 import 'package:soul/pages/home/widgets/feedback.dart';
+import 'package:soul/pages/home/widgets/notices.dart';
 import 'package:soul/pages/home/widgets/topics.dart';
 import 'package:soul/widgets/my_card.dart';
 
@@ -37,15 +39,15 @@ class HomePageState extends State<HomePage> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: Config.PAGE_PADDING),
         decoration: BoxDecoration(
-            // color: CupertinoColors.systemBrown.color.withOpacity(0.09)
-            ),
+            color: CupertinoColors.systemBrown.color.withOpacity(0.09)),
         // padding: EdgeInsets.symmetric(horizontal: 12),
         child: SingleChildScrollView(
             child: Column(
           children: [
             SizedBox(
-              height: 6,
+              height: 12,
             ),
+            HomeNotices(),
             Container(
                 width: double.infinity,
                 margin: EdgeInsets.only(bottom: 12),

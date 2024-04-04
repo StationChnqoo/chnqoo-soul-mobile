@@ -79,4 +79,5 @@ curl --location 'http://192.168.0.104:21981/sendSms.do?mobile=15552198996'
 
 ## Thanks
 
-- Material Design 3 https://www.fluttericon.cn/
+- Material Design 3 -> https://www.fluttericon.cn/
+- UI Notes -> https://uinotes.com/
