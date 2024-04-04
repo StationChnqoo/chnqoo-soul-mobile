@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:fluent_ui/fluent_ui.dart' hide Colors;
 import 'package:flutter/material.dart';
 import 'package:soul/widgets/my_avatar.dart';
 import 'package:soul/widgets/my_title_card.dart';
@@ -33,7 +32,9 @@ class FriendPopularState extends State<FriendPopular> {
                             SIZE,
                             (index) => Container(
                                   decoration: BoxDecoration(
-                                      color: Theme.of(context).primaryColor.withOpacity(0.08),
+                                      color: Theme.of(context)
+                                          .primaryColor
+                                          .withOpacity(0.08),
                                       borderRadius: BorderRadius.circular(12)),
                                   padding: EdgeInsets.symmetric(
                                       vertical: 6, horizontal: 12),
@@ -73,6 +74,6 @@ class FriendPopularState extends State<FriendPopular> {
                 ],
               ),
             ),
-            title: '最受欢迎的'));
+            title: '推荐'));
   }
 }
