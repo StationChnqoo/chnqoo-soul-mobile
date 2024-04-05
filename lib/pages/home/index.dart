@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+import 'package:soul/constants/bing_wall_paper.dart';
 import 'package:soul/constants/config.dart';
 import 'package:soul/constants/get_stores.dart';
 import 'package:soul/constants/services.dart';
@@ -93,7 +94,7 @@ class HomePageState extends State<HomePage> {
 
   loadBingPicture() async {
     var result = await Services().selectBingWallPaper();
-    // stores.setBingWallPaper(BingWallPaper.fromJson(result.data));
+    stores.setBingWallPaper(BingWallPaper.fromJson(result.data));
   }
 
   initGetStores() {

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:soul/pages/friend/index.dart';
 import 'package:soul/pages/home/index.dart';
+import 'package:soul/pages/my/index.dart';
 import 'package:soul/pages/social/index.dart';
 import 'package:soul/pages/store/index.dart';
 
@@ -44,7 +45,7 @@ class App extends StatelessWidget {
   }
 
   List<Widget> _buildScreens() {
-    return [HomePage(), SocialPage(), FriendPage(), StorePage(), Container()];
+    return [HomePage(), SocialPage(), FriendPage(), StorePage(), MyPage()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems(context) {
@@ -52,11 +53,10 @@ class App extends StatelessWidget {
       CupertinoIcons.house_alt,
       Icons.emoji_symbols_outlined,
       FluentIcons.search_nearby,
-      FluentIcons.balloons,
-      // Icons.insert_invitation_outlined,
+      CupertinoIcons.bubble_left_bubble_right,
       CupertinoIcons.settings
     ];
-    const titles = ['首页', '社区', '发现', '推广', '我的'];
+    const titles = ['首页', '社区', '发现', '消息', '我的'];
     return List.generate(
         5,
         (index) => PersistentBottomNavBarItem(

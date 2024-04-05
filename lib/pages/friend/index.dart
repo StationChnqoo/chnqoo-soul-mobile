@@ -76,7 +76,7 @@ class FriendPageState extends State<FriendPage> {
                       10,
                       (index) => Container(
                             padding: EdgeInsets.zero,
-                            margin: EdgeInsets.only(bottom: 12),
+                            margin: EdgeInsets.only(bottom: 6),
                             child: Card.outlined(
                               margin: EdgeInsets.zero,
                               child: Container(

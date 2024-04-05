@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -37,11 +38,11 @@ class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 667));
+    ScreenUtil.init(context, designSize: const Size(360, 640));
     return GetMaterialApp(
       title: '',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: CupertinoColors.systemRed),
         useMaterial3: true,
         snackBarTheme: SnackBarThemeData(
           shape: RoundedRectangleBorder(
