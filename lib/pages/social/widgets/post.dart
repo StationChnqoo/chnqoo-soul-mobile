@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soul/widgets/my_avatar.dart';
 import 'package:soul/widgets/my_card.dart';
@@ -132,8 +133,8 @@ class SocialPostState extends State<SocialPost> {
                 ),
                 Row(
                   children: [
-                    buildTag(Icons.chat_outlined, '88'),
-                    buildTag(Icons.thumb_up_off_alt_outlined, '88')
+                    buildTag(CupertinoIcons.captions_bubble, '88'),
+                    buildTag(CupertinoIcons.hand_thumbsup, '88')
                   ],
                 )
               ],

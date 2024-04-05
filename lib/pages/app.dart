@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:soul/pages/friend/index.dart';
 import 'package:soul/pages/home/index.dart';
+import 'package:soul/pages/message/index.dart';
 import 'package:soul/pages/my/index.dart';
 import 'package:soul/pages/social/index.dart';
 import 'package:soul/pages/store/index.dart';
@@ -45,7 +46,7 @@ class App extends StatelessWidget {
   }
 
   List<Widget> _buildScreens() {
-    return [HomePage(), SocialPage(), FriendPage(), StorePage(), MyPage()];
+    return [HomePage(), SocialPage(), FriendPage(), MessagePage(), MyPage()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems(context) {

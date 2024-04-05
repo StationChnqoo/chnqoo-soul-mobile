@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -27,6 +28,8 @@ class MyPageState extends State<MyPage> {
     return SafeArea(
         child: Container(
       // padding: EdgeInsets.symmetric(horizontal: 15),
+      decoration: BoxDecoration(
+          color: CupertinoColors.systemBrown.color.withOpacity(0.09)),
       child: SingleChildScrollView(
         child: Column(
           children: [

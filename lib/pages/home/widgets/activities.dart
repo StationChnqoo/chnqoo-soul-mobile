@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fluent_ui/fluent_ui.dart' hide Colors;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soul/widgets/my_avatars.dart';
 import 'package:soul/widgets/my_title_card.dart';
@@ -82,8 +83,8 @@ class HomeActivitiesState extends State<HomeActivities> {
                                                   Row(
                                                     children: [
                                                       Icon(
-                                                        FluentIcons
-                                                            .p_b_i_anomalies_marker,
+                                                        CupertinoIcons
+                                                            .paperplane,
                                                         size: 14,
                                                         color: Theme.of(context)
                                                             .primaryColor,

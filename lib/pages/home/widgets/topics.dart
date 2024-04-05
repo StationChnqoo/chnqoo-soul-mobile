@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fluent_ui/fluent_ui.dart' hide Colors;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soul/widgets/my_avatars.dart';
 import 'package:soul/widgets/my_title_card.dart';
@@ -36,7 +37,7 @@ class HomeTopicsState extends State<HomeTopics> {
                                 Row(
                                   children: [
                                     Icon(
-                                      FluentIcons.calories,
+                                      CupertinoIcons.flame,
                                       size: 16,
                                       color: Theme.of(context).primaryColor,
                                     ),
